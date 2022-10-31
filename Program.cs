@@ -13,7 +13,7 @@ namespace Loops_GameLoopChallenge_
         static int x;
         static int y;
 
-        static bool gameOver;
+        static bool gameOver; //gameOver kill screen. True or false.
 
         static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace Loops_GameLoopChallenge_
             x = 50;
             y = 10;
 
-            PlayerDraw();
+            PlayerDraw(); //Player spawns in
 
             Console.ReadKey(true);
             
@@ -44,28 +44,33 @@ namespace Loops_GameLoopChallenge_
 
         static void PlayerUpdate()
         {
-            //"ConsoleKeyInfo" is all the values of the keys. We make a new variable called "inputKey" that's right next to "ConsoleKeyInfo because we're making a new variable with that name. 
+            //"ConsoleKeyInfo" is all the values of the keys on the keyboard. We make a new variable called "inputKey" that's right next to "ConsoleKeyInfo" because we're making a new variable with that name. 
 
             //inputKey = Console.ReadKey(true) is saying to put the pressed key into the inputKey variable as its value. So you have to press a button to continue, and returns a key value.
 
+            //the ".Key" in "inputKey.Key" Signifies the physical key that was pressed. Almost like "inputKey W" but not to be typed that way. 
+
+
+
+             //variable    //Name
             ConsoleKeyInfo inputKey;
-            inputKey = Console.ReadKey(true);
-            if(inputKey.Key == ConsoleKey.W)
+            inputKey = Console.ReadKey(true); 
+            if(inputKey.Key == ConsoleKey.W || inputKey.Key == ConsoleKey.UpArrow) //ConsoleKey.(key pressed) is the final output in the program. 
             {
                 y = y - 1;
             }
 
-            else if(inputKey.Key == ConsoleKey.A)
+            else if(inputKey.Key == ConsoleKey.A || inputKey.Key == ConsoleKey.LeftArrow)
             {
                 x = x - 5;
             }
 
-            else if (inputKey.Key == ConsoleKey.S)
+            else if (inputKey.Key == ConsoleKey.S || inputKey.Key == ConsoleKey.DownArrow)
             {
                 y = y +1;
             }
 
-            else if (inputKey.Key == ConsoleKey.D)
+            else if (inputKey.Key == ConsoleKey.D || inputKey.Key ==ConsoleKey.RightArrow)
             {
                 x = x + 5;
             }
@@ -84,9 +89,9 @@ namespace Loops_GameLoopChallenge_
 
         static void PlayerDraw()
         {
-            Console.Clear();
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine("(^_^)");
+            Console.Clear(); //This is the command to clear the previous action
+            Console.SetCursorPosition(x, y); //This is the code to move the player
+            Console.WriteLine("(^_^)"); //This is the character
         }
 
 
