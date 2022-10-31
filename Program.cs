@@ -10,6 +10,14 @@ namespace Loops_GameLoopChallenge_
     {
         static void Main(string[] args)
         {
+            PlayerDraw(50, 10);
+            Console.ReadKey(true);
+        }
+
+        static void PlayerDraw(int x, int y)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine("(^_^)");
         }
     }
 }
