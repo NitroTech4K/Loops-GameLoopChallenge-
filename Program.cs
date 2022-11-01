@@ -50,32 +50,40 @@ namespace Loops_GameLoopChallenge_
 
             //the ".Key" in "inputKey.Key" Signifies the physical key that was pressed. Almost like "inputKey W" but not to be typed that way. 
 
+            ConsoleKeyInfo input;
+            input = Console.ReadKey(true);
+
+            
+
+            Console.WriteLine("You just pressed the " + (input.Key) + " key.");
+
+           
 
 
              //variable    //Name
-            ConsoleKeyInfo inputKey;
-            inputKey = Console.ReadKey(true); 
-            if(inputKey.Key == ConsoleKey.W || inputKey.Key == ConsoleKey.UpArrow) //ConsoleKey.(key pressed) is the final output in the program. 
+            
+             
+            if(input.Key == ConsoleKey.W || input.Key == ConsoleKey.UpArrow) //ConsoleKey.(key pressed) is the final output in the program. 
             {
                 y = y - 1;
             }
 
-            else if(inputKey.Key == ConsoleKey.A || inputKey.Key == ConsoleKey.LeftArrow)
+            else if(input.Key == ConsoleKey.A || input.Key == ConsoleKey.LeftArrow)
             {
                 x = x - 5;
             }
 
-            else if (inputKey.Key == ConsoleKey.S || inputKey.Key == ConsoleKey.DownArrow)
+            else if (input.Key == ConsoleKey.S || input.Key == ConsoleKey.DownArrow)
             {
                 y = y +1;
             }
 
-            else if (inputKey.Key == ConsoleKey.D || inputKey.Key ==ConsoleKey.RightArrow)
+            else if (input.Key == ConsoleKey.D || input.Key ==ConsoleKey.RightArrow)
             {
                 x = x + 5;
             }
 
-            else if (inputKey.Key == ConsoleKey.Escape)
+            else if (input.Key == ConsoleKey.Escape)
             {
                 gameOver = true;
             }
