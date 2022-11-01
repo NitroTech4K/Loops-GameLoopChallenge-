@@ -50,7 +50,12 @@ namespace Loops_GameLoopChallenge_
 
             //the ".Key" in "inputKey.Key" Signifies the physical key that was pressed. Almost like "inputKey W" but not to be typed that way. 
 
+            
+            
+            
+            //variable    //Name
             ConsoleKeyInfo input;
+
             input = Console.ReadKey(true);
 
             
@@ -60,8 +65,7 @@ namespace Loops_GameLoopChallenge_
            
 
 
-             //variable    //Name
-            
+          
              
             if(input.Key == ConsoleKey.W || input.Key == ConsoleKey.UpArrow) //ConsoleKey.(key pressed) is the final output in the program. 
             {
