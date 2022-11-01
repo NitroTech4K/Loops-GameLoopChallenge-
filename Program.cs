@@ -32,7 +32,7 @@ namespace Loops_GameLoopChallenge_
             
             while (gameOver == false)
             {
-                PlayerUpdate();
+                PlayerUpdate(); 
                 PlayerDraw();
             }
 
@@ -89,7 +89,7 @@ namespace Loops_GameLoopChallenge_
 
         static void PlayerDraw()
         {
-            Console.Clear(); //This is the command to clear the previous action
+            //Console.Clear(); //This is the command to clear the previous action (NO SNAKE GAME)
             Console.SetCursorPosition(x, y); //This is the code to move the player
             Console.WriteLine("(^_^)"); //This is the character
         }
